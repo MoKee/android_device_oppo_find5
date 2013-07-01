@@ -1,0 +1,12 @@
+[
+ {
+   "repository": "MoKee/android_kernel_oppo_find5",
+   "target_path": "kernel/oppo/find5",
+   "branch": "jb-mr1_mkt"
+ },
+ {
+   "repository": "MoKee/android_vendor_oppo_find5",
+   "target_path": "vendor/oppo/find5",
+   "branch": "jb-mr1_mkt"
+ }
+]

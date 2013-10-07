@@ -136,4 +136,8 @@ BOARD_USES_SEPERATED_VOICE_SPEAKER := true
 BOARD_HAS_NO_SELECT_BUTTON := true
 
 # dont build docs
-DISABLE_DROIDDOC := true 
+DISABLE_DROIDDOC := true
+
+ifdef MK_RELEASE
+WITH_DEXPREOPT := true
+endif

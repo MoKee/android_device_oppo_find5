@@ -56,6 +56,7 @@
         <item>1000</item>
         <item>1600</item>
         <item>3000</item>
+        <item>10000</item>
     </integer-array>
 
     <!-- Array of output values for LCD backlight corresponding to the LUX values
@@ -73,7 +74,8 @@
         <item>108</item>  <!-- 800-1000 -->
         <item>144</item>  <!-- 1000-1600 -->
         <item>181</item>  <!-- 1600-3000 -->
-        <item>255</item>  <!-- 3000+ -->
+        <item>254</item>  <!-- 3000-10000 -->
+        <item>255</item>  <!-- 10000+ -->
     </integer-array>
 
     <!-- Array of output values for button backlight corresponding to the LUX values
@@ -91,19 +93,9 @@
         <item>108</item>  <!-- 800-1000 -->
         <item>144</item>  <!-- 1000-1600 -->
         <item>181</item>  <!-- 1600-3000 -->
-        <item>255</item>  <!-- 3000+ -->
+        <item>254</item>  <!-- 3000-10000 -->
+        <item>255</item>  <!-- 10000+ -->
     </integer-array>
-
-    <!-- Boolean indicating whether we want button brightness support -->
-    <bool name="config_button_brightness_support">true</bool>
-
-    <!-- Minimum screen brightness setting allowed by the power manager.
-         The user is forbidden from setting the brightness below this level. -->
-    <integer name="config_screenBrightnessSettingMinimum">2</integer>
-
-    <!-- Maximum screen brightness allowed by the power manager.
-         The user is forbidden from setting the brightness above this level. -->
-    <integer name="config_screenBrightnessSettingMaximum">255</integer>
 
     <!-- Minimum screen brightness setting allowed by the power manager.
          The user is forbidden from setting the brightness below this level. -->
@@ -253,21 +245,11 @@
          config to 7. -->
     <integer name="config_deviceHardwareKeys">7</integer>
 
-    <!-- empty string to disable, or like: /sys/kernel/fast_charge/force_fast_charge
-         it is disabled by default so devices need to add an overlay to enable-->
-    <string name="config_fastChargePath" translatable="false">/sys/kernel/fast_charge/force_fast_charge</string>
-
-    <!-- If this is true, the CM torch will be used. -->
-    <bool name="config_useCMTorch">true</bool>
-
     <!-- Default value for led color when battery is low on charge: <= 14% -->
     <integer name="config_notificationsBatteryLowARGB">0xFFFF0000</integer>
 
     <!-- Default value for led color when battery is medium charged: 15-89% -->
     <integer name="config_notificationsBatteryMediumARGB">0xFFFF0000</integer>
-
-    <!-- Default value for led color when batter is almost charged: 90-99% -->
-    <integer name="config_notificationsBatteryAlmostARGB">0xFFFF6600</integer>
 
     <!-- Default value for led color when battery is fully charged: 100% -->
     <integer name="config_notificationsBatteryFullARGB">0xFF00FF00</integer> 

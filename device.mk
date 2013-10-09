@@ -267,17 +267,15 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # other apps
 PRODUCT_PACKAGES += \
     Apollo \
-   	DSPManager \
-   	libcyanogen-dsp \
+    DSPManager \
+    libcyanogen-dsp \
     libncurses \
     bash \
     CMFileManager \
     LockClock \
     Torch \
-	CMTorch \
-	OmniTorch \
-	Trebuchet \
-	Find5Parts
+    Trebuchet \
+    Find5Parts
 
 # selinux
 PRODUCT_PROPERTY_OVERRIDES += \

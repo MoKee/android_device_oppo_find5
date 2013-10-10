@@ -274,7 +274,7 @@ PRODUCT_PACKAGES += \
     CMFileManager \
     LockClock \
     Torch \
-    Trebuchet \
+    MoKeeLauncher \
     Find5Parts
 
 # selinux

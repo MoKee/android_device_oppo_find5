@@ -35,10 +35,6 @@ PRODUCT_PACKAGES += \
     charger_res_images \
     charger
 
-# Vold and Storage
-PRODUCT_COPY_FILES += \
-        device/oppo/find5/configs/vold.fstab:system/etc/vold.fstab
-
 # Live Wallpapers
 PRODUCT_PACKAGES += \
         LiveWallpapers \
@@ -115,22 +111,11 @@ PRODUCT_PACKAGES += \
     libnfc \
     libnfc_jni \
     Nfc \
-    Tag \
-    com.android.nfc_extras
+    Tag
 
 # NFC feature files
 PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/com.android.nfc_extras.xml:system/etc/permissions/com.android.nfc_extras.xml \
     frameworks/native/data/etc/android.hardware.nfc.xml:system/etc/permissions/android.hardware.nfc.xml
-
-# NFCEE access control
-ifeq ($(TARGET_BUILD_VARIANT),user)
-    NFCEE_ACCESS_PATH := device/oppo/find5/configs/nfcee_access.xml
-else
-    NFCEE_ACCESS_PATH := device/oppo/find5/configs/nfcee_access_debug.xml
-endif
-PRODUCT_COPY_FILES += \
-    $(NFCEE_ACCESS_PATH):system/etc/nfcee_access.xml
 
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.opengles.version=131072
@@ -150,9 +135,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	persist.audio.fluence.mode=endfire \
 	persist.audio.lowlatency.rec=false \
 	af.resampler.quality=4 \
-	lpa.decode=false \
+	lpa.decode=true \
 	tunnel.decode=false \
-	tunnel.audiovideo.decode=true
+	tunnel.audiovideo.decode=false
 
 # Debugging
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -223,8 +208,7 @@ PRODUCT_PACKAGES += \
     libOmxEvrcEnc \
     libOmxQcelp13Enc \
 	libstagefrighthw \
-	libc2dcolorconvert \
-	libdashplayer
+	libc2dcolorconvert
 
 PRODUCT_PACKAGES += \
 	bdAddrLoader \

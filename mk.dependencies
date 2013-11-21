@@ -1,0 +1,10 @@
+[
+ {
+   "repository": "android_kernel_oppo_find5",
+   "target_path": "kernel/oppo/find5"
+ },
+ {
+   "repository": "android_vendor_oppo_find5",
+   "target_path": "vendor/oppo/find5"
+ }
+]

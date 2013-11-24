@@ -86,8 +86,8 @@ TARGET_USES_C2D_COMPOSITION := true
 # Recovery
 TARGET_RECOVERY_FSTAB := device/oppo/find5/configs/fstab.find5
 RECOVERY_FSTAB_VERSION := 2
-USE_SET_METADATA := false
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
+BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/oppo/find5/recovery/recovery_keys.c
 BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_23x41.h\"
 
@@ -132,28 +132,25 @@ BOARD_USES_SEPERATED_VOICE_SPEAKER := true
 
 -include vendor/oppo/find5/BoardConfigVendor.mk
 
-# selinux - maxwen: disabled for now
-#BOARD_SEPOLICY_DIRS := \
-#       device/oppo/find5/sepolicy
+# SELinux
+BOARD_SEPOLICY_DIRS := \
+        device/oppo/find5/sepolicy
 
-#BOARD_SEPOLICY_UNION := \
-#       app.te \
-#      bluetooth.te \
-#       compatibility.te \
-#       device.te \
-#       domain.te \
-#       drmserver.te \
-#       file.te \
-#       file_contexts \
-#       hci_init.te \
-#       init_shell.te \
-#       keystore.te \
-#       mediaserver.te \
-#       kickstart.te \
-#       nfc.te \
-#       rild.te \
-#       surfaceflinger.te \
-#       system.te \
-#       ueventd.te \
-#       wpa.te
-
+BOARD_SEPOLICY_UNION := \
+       app.te \
+       bluetooth.te \
+       device.te \
+       domain.te \
+       drmserver.te \
+       file.te \
+       file_contexts \
+       hci_init.te \
+       init_shell.te \
+       keystore.te \
+       mediaserver.te \
+       kickstart.te \
+       rild.te \
+       surfaceflinger.te \
+       system.te \
+       ueventd.te \
+       wpa.te

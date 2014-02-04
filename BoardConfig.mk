@@ -20,7 +20,7 @@
 TARGET_BOARD_INFO_FILE := device/oppo/find5/board-info.txt
 
 # Kernel
-TARGET_KERNEL_CONFIG := cyanogenmod_x909_defconfig
+TARGET_KERNEL_CONFIG := mokee_x909_defconfig
 
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/oppo/find5/bluetooth

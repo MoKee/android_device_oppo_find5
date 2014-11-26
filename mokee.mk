@@ -1,13 +1,8 @@
-$(call inherit-product, device/oppo/find5/full_find5.mk)
+$(call inherit-product, vendor/mk/config/common_full_phone.mk)
 
-# Inherit some common MK stuff
-$(call inherit-product, vendor/mk/config/gsm.mk)
-
-# Enhanced NFC
 $(call inherit-product, vendor/mk/config/nfc_enhanced.mk)
 
-# Inherit some common MK stuff.
-$(call inherit-product, vendor/mk/config/common_full_phone.mk)
+$(call inherit-product, device/oppo/find5/full_find5.mk)
 
 PRODUCT_NAME := mk_find5
 PRODUCT_DEVICE := find5
